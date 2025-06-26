@@ -1,0 +1,48 @@
+.gitignore for Xcode and macOS projects
+
+Build products
+
+build/
+DerivedData/
+
+User-specific settings
+
+*.swp
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.xcuserdatad
+*.xcworkspace/xcuserdata/
+
+macOS system files
+
+.DS_Store
+
+Xcode project files
+
+*.moved-aside
+*.xcuserstate
+*.xcsettings
+
+Swift Package Manager
+
+.swiftpm
+
+CocoaPods
+
+Pods/
+
+Carthage
+
+Carthage/Build/
+
+Fastlane
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output
+
+Others
+
+*.orig

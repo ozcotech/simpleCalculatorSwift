@@ -10,11 +10,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var firstText: UITextField!
-    
     @IBOutlet weak var secondText: UITextField!
-    
-    
     @IBOutlet weak var resultLabel: UILabel!
+    
+    func getInputNumbers() -> (Int, Int)? {
+        guard let first = Int(firstText.text ?? ""), let second = Int(secondText.text ?? "") else {
+            return nil
+        }
+        return (first, second)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +27,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func sumClicked(_ sender: Any) {
-        
-        let firstTextValue = firstText.text ?? ""
-        let secondTextValue = secondText.text ?? ""
-        
-        guard let firstNumber = Int(firstTextValue), let secondNumber = Int(secondTextValue) else {
+        guard let (firstNumber, secondNumber) = getInputNumbers() else {
             resultLabel.text = "Please enter valid numbers"
             return
         }
@@ -38,11 +38,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func minusClicked(_ sender: Any) {
-        
-        let firstTextValue = firstText.text ?? ""
-        let secondTextValue = secondText.text ?? ""
-        
-        guard let firstNumber = Int(firstTextValue), let secondNumber = Int(secondTextValue) else {
+        guard let (firstNumber, secondNumber) = getInputNumbers() else {
             resultLabel.text = "Please enter valid numbers"
             return
         }
@@ -53,11 +49,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func multiplyClicked(_ sender: Any) {
-        
-        let firstTextValue = firstText.text ?? ""
-        let secondTextValue = secondText.text ?? ""
-        
-        guard let firstNumber = Int(firstTextValue), let secondNumber = Int(secondTextValue) else {
+        guard let (firstNumber, secondNumber) = getInputNumbers() else {
             resultLabel.text = "Please enter valid numbers"
             return
         }
@@ -68,21 +60,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func divideClicked(_ sender: Any) {
-        
-        let firstTextValue = firstText.text ?? ""
-        let secondTextValue = secondText.text ?? ""
-        
-        guard let firstNumber = Int(firstTextValue), let secondNumber = Int(secondTextValue) else {
-                resultLabel.text = "Please enter valid numbers"
-                return
-            }
-            guard secondNumber != 0 else {
-                resultLabel.text = "Cannot divide by zero"
-                return
-            }
-        
+        guard let (firstNumber, secondNumber) = getInputNumbers() else {
+            resultLabel.text = "Please enter valid numbers"
+            return
+        }
+        guard secondNumber != 0 else {
+            resultLabel.text = "Cannot divide by zero"
+            return
+        }
         resultLabel.text = "Result: \(firstNumber / secondNumber)"
-        
     }
     
 

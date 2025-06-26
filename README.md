@@ -46,9 +46,9 @@ Result: 2
     •    AppDelegate.swift — Standard app setup
     •    Assets.xcassets — App icons and images
 
-✨ Screenshots
+## ✨ Screenshots
 
-Add screenshots of your app here
+![Main Screen](screenshots/main_screen.png)
 
 📄 License
 

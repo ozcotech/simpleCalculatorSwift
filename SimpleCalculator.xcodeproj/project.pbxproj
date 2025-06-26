@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D54DE9C32E0DED25009C91E0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D54DE9C22E0DED25009C91E0 /* README.md */; };
+		D54DE9C52E0DEDE1009C91E0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D54DE9C42E0DEDD5009C91E0 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D54DE9982E0DACB6009C91E0 /* SimpleCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54DE9C22E0DED25009C91E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D54DE9C42E0DEDD5009C91E0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				D54DE9C22E0DED25009C91E0 /* README.md */,
+				D54DE9C42E0DEDD5009C91E0 /* .gitignore */,
 				D54DE99A2E0DACB6009C91E0 /* SimpleCalculator */,
 				D54DE9992E0DACB6009C91E0 /* Products */,
 			);
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54DE9C52E0DEDE1009C91E0 /* .gitignore in Resources */,
 				D54DE9C32E0DED25009C91E0 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
